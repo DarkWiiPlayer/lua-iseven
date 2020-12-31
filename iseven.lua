@@ -24,6 +24,16 @@ function iseven.whatisitthen(number)
 	end
 end
 
+local memo = {}
+function iseven.memoized(number)
+	if memo[number] then
+		return "I already told you that!"
+	else
+		memo[number] = iseven.whatisitthen(number)
+		return memo[number]
+	end
+end
+
 function iseven.idonteven()
 	return "🍻" -- I don't even even
 end
