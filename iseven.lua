@@ -14,6 +14,16 @@ function iseven.isnteven(number)
 	end
 end
 
+function iseven.whatisitthen(number)
+	if iseven.iseven(number) then
+		return "even"
+	elseif iseven.isnteven(number) then
+		return "even't"
+	else
+		return "You've got to be fucking kidding me"
+	end
+end
+
 function iseven.idonteven()
 	return "🍻" -- I don't even even
 end
