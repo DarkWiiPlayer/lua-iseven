@@ -1,5 +1,11 @@
 local iseven = {}
 
+-- Do some warmup so the CPU doesn't injure itself while exercising
+local start_warmup = os.time()
+while os.difftime(os.time(), start_warmup) < 3 do
+	local a = start_warmup % os.time()
+end
+
 function iseven.iseven(number)
 	if number % 2 == 0
 	then return true
